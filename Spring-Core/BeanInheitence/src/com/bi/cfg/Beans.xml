@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<bean id="basePhone" class="com.bi.beans.Mobile" abstract="true">
+		<property name="name" value="Iphone Z" />
+		<property name="color" value="Red" />
+		<property name="price" value="75000.00" />
+	</bean>
+
+	<bean id="iphone2" class="com.bi.beans.Mobile" parent="basePhone">
+		<property name="id" value="102" />
+		<property name="imei" value="47557575757" />
+	</bean>
+
+	<bean id="iphone3" class="com.bi.beans.Mobile" parent="basePhone">
+		<property name="id" value="103" />
+		<property name="imei" value="68686886" />
+	</bean>
+</beans>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+	
+	<bean id="r" class="com.ba.beans.Robot" autowire="constructor" >
+		<property name="id" value="1001" />
+		<property name="name" value="Chitti" />
+		<property name="type" value="Entertainment" />
+	</bean>
+	
+	<bean id="chip32Bit" class="com.ba.beans.Chip" autowire-candidate="false">
+		<property name="id" value="2002" />
+		<property name="type" value="32-Bit chip" />
+	</bean>
+	<bean id="chip64Bit" class="com.ba.beans.Chip">
+		<property name="id" value="2004" />
+		<property name="type" value="64-Bit chip" />
+	</bean>
+</beans>

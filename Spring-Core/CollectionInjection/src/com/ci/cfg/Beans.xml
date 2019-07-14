@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<bean id="p" class="com.ci.beans.Person">
+		<property name="name" value="Raja" />
+		<property name="visitedPlaces">
+			<list>
+				<value>Hyd</value>
+				<value>Banglore</value>
+				<value>Chennai</value>
+				<value>Hyd</value>
+			</list>
+		</property>
+
+		<property name="courses">
+			<set>
+				<value>Java</value>
+				<value>C#</value>
+				<value>C#</value>
+				<value>UI Technologies</value>
+			</set>
+		</property>
+
+		<property name="mobileNums">
+			<map>
+				<entry key="Office" value="979797979" />
+				<entry key="Personal" value="96686868" />
+			</map>
+		</property>
+
+		<property name="emails">
+			<props>
+				<prop key="DevTeam">irctc_dev@infosy.com</prop>
+				<prop key="TestingTeam">irctc_testing@infosys.com</prop>
+				<prop key="IRCTCteam">irctc@infosy.com</prop>
+			</props>
+		</property>
+
+	</bean>
+</beans>

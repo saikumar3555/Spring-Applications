@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<bean id="c"
+		class="org.springframework.beans.factory.config.CustomEditorConfigurer">
+		<property name="customEditors">
+			<map>
+				<entry key="com.pe.beans.AddNumber" value="com.pe.beans.AddNumberEditor" />
+			</map>
+		</property>
+	</bean>
+
+	<bean id="calc" class="com.pe.beans.Calculator">
+		<property name="an" value="10,20" />
+	</bean>
+</beans>

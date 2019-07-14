@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:c="http://www.springframework.org/schema/c"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<bean id="bm" class="com.ns.beans.BankManager"
+		p:email="raju@axis.com"
+		p:managerName="Raju"
+		p:managerExp="10 years" />
+	
+	<bean id="ba" class="com.ns.beans.BankAccount"
+		p:accNo="797979799"
+		p:accType="Savings"
+		p:branchLocation="S.R Nagar"
+		p:holderName="Mahesh"
+		p:ifscCode="ICICI000078"
+		p:manager-ref="bm" />
+
+</beans>

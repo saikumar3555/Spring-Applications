@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<bean id="daoFactory" class="com.ifm.beans.DaoFactory">
+	</bean>
+	<bean id="deptDao" factory-bean="daoFactory" factory-method="getInstance">
+	</bean>
+	<bean id="deptService" class="com.ifm.beans.DeptService">
+		<property name="dao" ref="deptDao" />
+	</bean>
+</beans>
